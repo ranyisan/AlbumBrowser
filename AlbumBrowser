@@ -1,0 +1,20 @@
+s.name         = "AlbumBrowser"   // pod 名称
+  s.version      = "1.0.0" // 版本号
+  s.summary      = "album browser of OC."
+  s.description  = <<-DESC
+                        AlbumBrowser.
+                   DESC
+
+  s.homepage     = "https://github.com/ranyisan/AlbumBrowser" // github主页地址
+  s.license      = "Apache-2.0" // 添加的license
+
+  s.author             = { "iOS-Umbrella" => "ranyisan@163.com" }
+  s.platform     = :ios, "8.0" // 支持的系统版本
+  s.source       = { :git => "https://github.com/ranyisan/ranyisan.git", :tag => "#{s.version}" } // 项目地址
+
+   s.subspec 'Core' do |ss|
+        ss.source_files = 'AlbumBrowser/*.{h}' // 源文件路径
+        ss.vendored_libraries = 'AlbumBrowser/*.{a}' // 静态库路径
+    end
+  s.requires_arc = true
+end
